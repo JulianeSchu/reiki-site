@@ -1069,3 +1069,14 @@ blockquote {
     transition-duration: 0.01ms !important;
   }
 }
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
