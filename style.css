@@ -1095,10 +1095,9 @@ blockquote {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  border-radius: inherit; /* Herda exatamente o arredondamento do quadro pai */
+  border-radius: inherit; 
 }
 
-/* Garante que o container interno ocupe 100% do espaço útil dentro do padding */
 .hero-image .image-placeholder,
 .crystals-image .image-placeholder {
   width: 100%;
@@ -1109,7 +1108,6 @@ blockquote {
   display: block;
 }
 
-/* Faz as imagens preencherem 100% da altura e largura sem sobras */
 .hero-image .image-placeholder img,
 .crystals-image .image-placeholder img {
   width: 100%;
@@ -1119,8 +1117,7 @@ blockquote {
   display: block;
 }
 
-/* Define proporção exata para o quadro dos cristais (igual ao Hero) */
 .crystals-image {
   min-height: unset;
-  aspect-ratio: 4 / 3; /* Proporção equilibrada para foto horizontal */
+  aspect-ratio: 4 / 3; 
 }
