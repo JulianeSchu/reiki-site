@@ -494,7 +494,7 @@ blockquote {
   grid-template-columns: 0.95fr 1fr;
   gap: 100px;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .crystals-image {
@@ -1046,6 +1046,11 @@ blockquote {
     gap: 0;
   }
 
+  .crystals-image .image-placeholder {
+    max-width: 100%;
+    height: 280px;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -1079,4 +1084,43 @@ blockquote {
   border-radius: 20px;
   position: relative;
   z-index: 1;
+}
+
+.hero-image .image-placeholder,
+.crystals-image .image-placeholder {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: inherit; /* Herda exatamente o arredondamento do quadro pai */
+}
+
+/* Garante que o container interno ocupe 100% do espaço útil dentro do padding */
+.hero-image .image-placeholder,
+.crystals-image .image-placeholder {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+
+/* Faz as imagens preencherem 100% da altura e largura sem sobras */
+.hero-image .image-placeholder img,
+.crystals-image .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Define proporção exata para o quadro dos cristais (igual ao Hero) */
+.crystals-image {
+  min-height: unset;
+  aspect-ratio: 4 / 3; /* Proporção equilibrada para foto horizontal */
 }
